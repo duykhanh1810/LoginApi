@@ -28,7 +28,9 @@ public class EmployeeServiceImpl implements EmployeeService {
                 employeeDto.getEmail(),
                 this.passwordEncoder.encode(employeeDto.getPassword())
         );
+
         employeeRepository.save(employee);
+
         return employee.getName();
     }
 
